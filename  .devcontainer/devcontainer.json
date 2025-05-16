@@ -1,0 +1,16 @@
+{
+  // ... other devcontainer settings
+  "name": "My NexusFlow Engine Codespace",
+  "remoteUser": "codespace",
+  "containerEnv": {
+    "NODE_AUTH_TOKEN": "${token}" // This might not be needed if npmrc uses GITHUB_TOKEN directly
+  },
+  "tokenScopes": {
+    "github": [
+      "repo", // For general repo access
+      "write:packages", // To publish packages
+      "read:packages" // To read packages (needed by the demo app later)
+    ]
+  }
+  // ...
+}
